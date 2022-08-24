@@ -39,3 +39,7 @@ body {
 .button {
   @apply block w-32 text-center text-sm font-semibold px-5 py-3 rounded-lg drop-shadow-lg transition-all md:text-base md:w-40;
 }
+
+.active {
+  @apply text-primary scale-105;
+}
