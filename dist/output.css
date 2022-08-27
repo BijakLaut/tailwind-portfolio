@@ -657,6 +657,10 @@ video {
   margin-bottom: 4rem;
 }
 
+.-mr-2 {
+  margin-right: -0.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -713,12 +717,12 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.-mr-2 {
-  margin-right: -0.5rem;
-}
-
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
