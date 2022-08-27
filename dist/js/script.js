@@ -57,17 +57,40 @@ hamburger.addEventListener("click", function () {
   navMenu.classList.toggle("hidden");
 });
 
+// Auto-close Hamburger Menu
+window.addEventListener("click", function (e) {
+  if (e.target != hamburger && e.target != navMenu) {
+    hamburger.classList.remove("hamburger-active");
+    navMenu.classList.add("hidden");
+  }
+});
+
 // Section Target
 navLinks.forEach((element) => {
   element.addEventListener("click", function (e) {
     //Mengambil isi href
     let destination = element.getAttribute("href");
 
-    //Menangkap elemen
+    //Menggunakan href berisi id sebagai query selector
     let elemenDest = document.querySelector(destination);
 
     scrollTo(0, elemenDest.offsetTop - 80);
 
     e.preventDefault();
   });
+});
+
+// Dark Mode
+const darkToggle = document.querySelector("#dark-toggle");
+const html = document.querySelector("html");
+const circle = document.querySelector(".toggle-circle");
+
+darkToggle.addEventListener("click", function () {
+  if (darkToggle.checked) {
+    html.classList.add("dark");
+    circle.classList.add("geser");
+  } else {
+    html.classList.remove("dark");
+    circle.classList.remove("geser");
+  }
 });
